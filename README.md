@@ -3,35 +3,50 @@
 #### 介绍
 基于SpringBoot的酒店预订系统。
 
-#### 软件架构
-软件架构说明
+小程序 与 数据管理系统
+
+#### 后端
+- [Spring Boot 2.1.0](http://spring.io/projects/spring-boot/)
+- [Mybatis-Plus](https://mp.baomidou.com/guide/)
+- [MySQL 5.7](https://dev.mysql.com/downloads/mysql/5.7.html#downloads),[Hikari](https://brettwooldridge.github.io/HikariCP/),[Redis](https://redis.io/)
+- [Shiro](http://shiro.apache.org/),[JWT](https://jwt.io/)
+
+#### 前端
+- [Vue 2.5.17](https://cn.vuejs.org/),[Vuex](https://vuex.vuejs.org/zh/),[Vue Router](https://router.vuejs.org/zh/)
+- [Axios](https://github.com/axios/axios)
+- [vue-apexcharts](https://apexcharts.com/vue-chart-demos/line-charts/)
+- [ant-design-vue](https://vuecomponent.github.io/ant-design-vue/docs/vue/introduce-cn/)
+- [webpack](https://www.webpackjs.com/),[yarn](https://yarnpkg.com/zh-Hans/)
 
 
-#### 安装教程
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+#### 项目截图
 
-#### 使用说明
+[![gNIuH1.png](https://z3.ax1x.com/2021/05/10/gNIuH1.png)](https://imgtu.com/i/gNIuH1)
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+[![gNImu9.png](https://z3.ax1x.com/2021/05/10/gNImu9.png)](https://imgtu.com/i/gNImu9)
+
+[![gNIl4K.png](https://z3.ax1x.com/2021/05/10/gNIl4K.png)](https://imgtu.com/i/gNIl4K)
+
+[![gNIMAx.png](https://z3.ax1x.com/2021/05/10/gNIMAx.png)](https://imgtu.com/i/gNIMAx)
+
+[![gNIZjJ.png](https://z3.ax1x.com/2021/05/10/gNIZjJ.png)](https://imgtu.com/i/gNIZjJ)
+
+[![gNInBR.png](https://z3.ax1x.com/2021/05/10/gNInBR.png)](https://imgtu.com/i/gNInBR)
+
+[![gNIQN6.png](https://z3.ax1x.com/2021/05/10/gNIQN6.png)](https://imgtu.com/i/gNIQN6)
+
+[![gNI39O.png](https://z3.ax1x.com/2021/05/10/gNI39O.png)](https://imgtu.com/i/gNI39O)
+
+[![gNI83D.png](https://z3.ax1x.com/2021/05/10/gNI83D.png)](https://imgtu.com/i/gNI83D)
+
+[![gNIGge.jpg](https://z3.ax1x.com/2021/05/10/gNIGge.jpg)](https://imgtu.com/i/gNIGge)
+
+#### 备注
+
+1.  项目详情->点击进入
+2.  联系我 VX: Storm_Berserker
 
 #### 参与贡献
 
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
-
-
-#### 特技
-
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  Gitee 官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解 Gitee 上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是 Gitee 最有价值开源项目，是综合评定出的优秀开源项目
-5.  Gitee 官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  Gitee 封面人物是一档用来展示 Gitee 会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+1.  国家一级保护废物
