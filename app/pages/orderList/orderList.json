@@ -1,0 +1,7 @@
+{
+     "navigationBarTitleText": "我的订单",
+     "usingComponents": {
+          "clearInput": "../../components/clearInput/clearInput",
+          "van-panel": "../../dist/panel/index"
+     }
+}

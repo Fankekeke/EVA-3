@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cc.mrbird.febs.cos.dao.EvaluationMapper">
+
+    <sql id="baseResult">
+        eva.ID AS id,
+        eva.USER_ID AS userId,
+        eva.SCORE AS score,
+        eva.CONTENT AS content,
+        eva.ORDER_CODE AS orderCode,
+        o.MONEY AS money,
+        rt.TYPE_NAME AS typeName,
+        tu.USERNAME AS username
+    </sql>
+
+    <sql id="baseParam">
+        <if test="evaluation.code != null and evaluation.code != ''">
+            AND eva.`ORDER_CODE` LIKE CONCAT('%',#{evaluation.orderCode},'%')
+        </if>
+        <if test="evaluation.code != null and evaluation.code != ''">
+            AND tu.USERNAME LIKE CONCAT('%',#{evaluation.username},'%')
+        </if>
+    </sql>
+
+    <select id="getEvaluationPage" resultType="java.util.LinkedHashMap">
+        SELECT
+            <include refid="baseResult"/>
+        FROM
+            evaluation eva
+            LEFT JOIN t_user tu ON ( tu.USER_ID = eva.USER_ID )
+            LEFT JOIN `order_info` o ON ( eva.ORDER_CODE = o.`CODE` )
+            LEFT JOIN room r ON ( r.ID = o.ROOM_ID )
+            LEFT JOIN room_type rt ON (r.TYPE = rt.ID )
+        WHERE 1 = 1
+        AND eva.DELETE_FLAG = 0
+        <include refid="baseParam"/>
+    </select>
+</mapper>

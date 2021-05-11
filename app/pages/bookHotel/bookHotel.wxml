@@ -1,0 +1,43 @@
+<!--pages/bookHotel/bookHotel.wxml-->
+<import src='template.wxml' />
+<scroll-view class='bookScroll' scroll-y>
+     <van-toast id="van-toast" />
+     <view class='bookBody'>
+          <view class='bookMsg' style="font-size: 12px">
+               <view>{{hotelName}}</view>
+               <view style='margin-top:10rpx;'>房型：{{roomName}}</view>
+               <view style='margin-top:10rpx;'>床位：{{bed}}</view>
+               <view style='margin-top:10rpx;'>设施：{{remaker}}</view>
+          </view>
+
+          <template style="font-size: 12px" is='settingItem'
+               data="{{caption:'入住/离店',value:startDate+'/'+endDate,needIcon:false,isInput:false}}" />
+          <template is='settingItem' data="{{caption:'房间数量 ',value:'1间 ',needIcon:true,isInput:false}}" />
+          <view style='width:100%;height:24rpx;'></view>
+          <van-field model:value="{{ username }}" required clearable label="入住人" icon="question-o" placeholder="请输入用户名"
+               bind:click-icon="onClickIcon" />
+          <van-field model:value="{{ phone }}" label="手机号" placeholder="请输入手机号"/>
+          <template is='settingItem' data="{{caption:'到店时间',value:'19:00',needIcon:false,isInput:false}}" />
+          <view style='width:100%;height:24rpx;'></view>
+
+          <view class='settingItem'>
+               <text class='caption'>发票</text>
+               <switch class='invoice' color='#ee6715' checked />
+          </view>
+
+          <view class='settingItem'>
+               <text class='caption'>备注</text>
+               <input class='remark' placeholder='请补充你的其他需求' model:value="{{content}}"></input>
+          </view>
+          <view style='width:100%;height:100rpx;'></view>
+     </view>
+</scroll-view>
+
+<view class='payItem'>
+     <view class='priceItem'>
+          <text>应付：</text>
+          <text>¥{{roomPrice}}</text>
+          <text wx:if='{{isDiscount}}' class='payMsg'>(已优惠{{discount}}元)</text>
+     </view>
+     <view class='payBtn' bindtap="orderAdd">立即支付</view>
+</view>

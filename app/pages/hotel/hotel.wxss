@@ -1,0 +1,6 @@
+/* pages/hotel/hotel.wxss */
+.content_item {
+  padding: 18px;
+  color: gray;
+  font-size: 12px;
+}

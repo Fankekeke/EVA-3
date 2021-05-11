@@ -1,0 +1,10 @@
+{
+     "navigationBarTitleText": "客房预订",
+     "backgroundColor": "#ffffff",
+     "usingComponents": {
+          "clearInput": "../../components/clearInput/clearInput",
+          "van-field": "../../dist/field/index",
+          "van-notify": "../../dist/notify/index",
+          "van-toast": "../../dist/toast/index"
+     }
+}

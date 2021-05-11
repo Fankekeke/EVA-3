@@ -1,0 +1,23 @@
+<!--pages/minePage/minePage.wxml-->
+<import src='template.wxml' />
+
+<view class='loginHeader'>
+     <image src='{{userHead}}' class='userHead' mode='aspectFill' bindtap='previewHead' />
+     <text class='userTitle' bindtap='loginTap'>{{userTitle}}</text>
+</view>
+
+<view class='order'>
+     <view class='item' bindtap='allOrderTap'>
+          <image src='../../res/images/ic_order_all.png' mode='widthFix' class='icon' />
+          <text class='text'>全部订单</text>
+     </view>
+     <view class='vercialLine'>
+     </view>
+     <view class='item' bindtap='todoOrderTap'>
+          <image src='../../res/images/ic_order_book.png' mode='widthFix' class='icon' />
+          <text class='text'>待入住订单</text>
+     </view>
+</view>
+<view bindtap='hotelTap'>
+     <template is='settingItem' data="{{caption:'关于希尔顿',value:'',needIcon:true}}"/>
+</view>

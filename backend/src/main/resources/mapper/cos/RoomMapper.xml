@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cc.mrbird.febs.cos.dao.RoomMapper">
+    <sql id="baseResult">
+        r.ID AS id,
+        r.TYPE AS type,
+        r.BED AS bed,
+        r.SIZE AS size,
+        r.FLOOR AS floor,
+        r.WIFI AS wifi,
+        r.BROADBAND AS broadband,
+        r.RESIDENT AS resident,
+        r.SMOKE AS smoke,
+        r.REMAKER AS remaker,
+        r.ON_PUT AS onput,
+        rt.TYPE_NAME AS typeName,
+        rt.PRICE AS price,
+        rt.PIC AS pic,
+        rt.FACILITIES AS facilities
+    </sql>
+
+    <sql id="baseParam">
+        <if test="room.typeName != null and room.typeName != ''">
+            AND rt.TYPE_NAME LIKE CONCAT('%',#{room.typeName},'%')
+        </if>
+        <if test="room.remaker != null and room.remaker != ''">
+            AND r.REMAKER LIKE CONCAT('%',#{room.remaker},'%')
+        </if>
+        <if test="room.bed != null and room.bed != ''">
+            AND r.BED LIKE CONCAT('%',#{room.bed},'%')
+        </if>
+        <if test="room.wifi != null and room.wifi != '' or room.wifi == 0">
+            AND r.WIFI = #{room.wifi}
+        </if>
+        <if test="room.smoke != null and room.smoke != '' or room.smoke == 0">
+            AND r.SMOKE = #{room.smoke}
+        </if>
+    </sql>
+
+    <select id="getRoomPage" resultType="java.util.LinkedHashMap">
+        SELECT
+            <include refid="baseResult"/>
+        FROM
+            room r
+        LEFT JOIN room_type rt ON (rt.ID = r.TYPE)
+        WHERE 1 = 1
+        AND r.DELETE_FLAG = 0
+        <include refid="baseParam"/>
+    </select>
+
+    <select id="roomList" resultType="java.util.LinkedHashMap">
+        SELECT
+            <include refid="baseResult"/>,
+            COUNT( 1 ) AS roomCount,
+            COUNT( o.ROOM_ID ) AS useRoom
+        FROM
+            room r
+        LEFT JOIN room_type rt ON (rt.ID = r.TYPE)
+        LEFT JOIN `order_info` o ON ( o.ROOM_ID = rt.ID )
+        AND DATEDIFF(
+        DATE_FORMAT( o.END_DATE, '%Y-%m-%d' ),
+        DATE_FORMAT( CURDATE(), '%Y-%m-%d' )) > 0
+        AND o.`STATUS` = 0
+        OR o.`STATUS` = - 1
+        AND o.DELETE_FLAG = 0
+        WHERE
+            r.DELETE_FLAG = 0
+        GROUP BY
+            r.TYPE
+    </select>
+</mapper>

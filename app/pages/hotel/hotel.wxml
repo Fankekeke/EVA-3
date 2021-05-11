@@ -1,0 +1,16 @@
+<!--pages/hotel/hotel.wxml-->
+<van-panel title="地 址" status="✔️">
+  <view class="content_item">{{ hotel.address }}</view>
+</van-panel>
+<van-panel title="联系电话" status="✔️">
+  <view class="content_item">{{ hotel.phone }}</view>
+</van-panel>
+<van-panel title="介 绍" status="✔️">
+  <view class="content_item">{{ hotel.content }}</view>
+</van-panel>
+<van-panel title="酒店设施" status="✔️">
+  <view class="content_item">{{ hotel.facility }}</view>
+</van-panel>
+<van-panel title="订房提示" status="✔️">
+  <view class="content_item">{{ hotel.tip }}</view>
+</van-panel>
