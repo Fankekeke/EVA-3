@@ -5,6 +5,11 @@
 
 小程序 与 数据管理系统
 
+#### 接JAVAWEB毕设，纯原创，价格公道，诚信第一
+
+1.  有需要完整项目请联系 QQ：1258846421、VX: Storm_Berserker
+2.  价格私聊，可充当毕设
+
 #### 后端
 - [Spring Boot 2.1.0](http://spring.io/projects/spring-boot/)
 - [Mybatis-Plus](https://mp.baomidou.com/guide/)
@@ -42,11 +47,6 @@
 
 [![gNIGge.jpg](https://z3.ax1x.com/2021/05/10/gNIGge.jpg)](https://imgtu.com/i/gNIGge)
 
-#### 接JAVAWEB毕设，纯原创，价格公道，诚信第一
-
-1.  有需要完整项目请联系 QQ：1258846421、VX: Storm_Berserker
-2.  价格私聊，可充当毕设
-3.  非诚勿扰
 
 #### 参与贡献
 
