@@ -10,20 +10,6 @@
 1.  有需要完整项目请联系 QQ：1258846421、VX: Storm_Berserker
 2.  价格私聊，可充当毕设
 
-#### 后端
-- [Spring Boot 2.1.0](http://spring.io/projects/spring-boot/)
-- [Mybatis-Plus](https://mp.baomidou.com/guide/)
-- [MySQL 5.7](https://dev.mysql.com/downloads/mysql/5.7.html#downloads),[Hikari](https://brettwooldridge.github.io/HikariCP/),[Redis](https://redis.io/)
-- [Shiro](http://shiro.apache.org/),[JWT](https://jwt.io/)
-
-#### 前端
-- [Vue 2.5.17](https://cn.vuejs.org/),[Vuex](https://vuex.vuejs.org/zh/),[Vue Router](https://router.vuejs.org/zh/)
-- [Axios](https://github.com/axios/axios)
-- [vue-apexcharts](https://apexcharts.com/vue-chart-demos/line-charts/)
-- [ant-design-vue](https://vuecomponent.github.io/ant-design-vue/docs/vue/introduce-cn/)
-- [webpack](https://www.webpackjs.com/),[yarn](https://yarnpkg.com/zh-Hans/)
-
-
 
 #### 项目截图
 
