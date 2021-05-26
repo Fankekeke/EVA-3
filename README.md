@@ -1,7 +1,7 @@
-# 基于SpringBoot的酒店预订系统
+# 基于Spring的酒店预订系统
 
 #### 介绍
-基于SpringBoot的酒店预订系统。
+基于Spring的酒店预订系统。
 
 小程序 与 数据管理系统
 
